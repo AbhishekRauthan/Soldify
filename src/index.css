@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   @font-face {
@@ -9,4 +12,13 @@
     font-weight: normal;
     src: local('LEIXO DEMO'), url('./fonts/LEIXO-DEMO.woff') format('woff');
   }
+}
+
+
+.nav-item {
+  @apply text-xl font-proza items-start uppercase border-b-2 border-black md:border-none;
+}
+
+.bottom-span {
+  @apply hidden md:inline-block absolute bottom-0 left-0 peer-hover:bg-black delay-150 duration-300 ease-in-out w-0 peer-hover:w-full h-1;
 }

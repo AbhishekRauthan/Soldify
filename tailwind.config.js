@@ -5,7 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'lexio': ["LEIXO DEMO"]
+        'lexio': ["LEIXO DEMO"],
+        'proza': ["Proza Libre"]
       }
     },
   },
