@@ -10,15 +10,18 @@
     font-family: 'LEIXO DEMO';
     font-style: normal;
     font-weight: normal;
-    src: local('LEIXO DEMO'), url('./fonts/LEIXO-DEMO.woff') format('woff');
+    src: local('LEIXO DEMO'), url('./assets/fonts/LEIXO-DEMO.woff') format('woff');
   }
 }
 
+.nav-div {
+  @apply mx-3 my-3 transform hover:-translate-y-1 duration-300 ease-in-out md:relative;
+}
 
 .nav-item {
-  @apply text-xl font-proza items-start uppercase border-b-2 border-black md:border-none;
+  @apply text-xl font-proza items-start uppercase;
 }
 
 .bottom-span {
-  @apply hidden md:inline-block absolute bottom-0 left-0 peer-hover:bg-black delay-150 duration-300 ease-in-out w-0 peer-hover:w-full h-1;
+  @apply hidden md:inline-block absolute bottom-0 left-0 peer-hover:bg-gradient-to-r from-pink-400 to-purple-500 delay-150 duration-300 ease-in-out w-0 peer-hover:w-full h-0.5 rounded-full;
 }
