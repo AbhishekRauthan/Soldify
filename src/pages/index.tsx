@@ -1,5 +1,6 @@
 import React from "react";
 import Shopping from "../assets/shopping.svg";
+import Button from "../components/Button";
 
 const Home = () => {
   return (
@@ -23,6 +24,10 @@ const Home = () => {
                 indian brands
               </span>
             </p>
+            <div className="mx-auto mt-3 space-x-10 flex items-center">
+              <Button>Check Store</Button>
+              <Button secondary>Sign Up</Button>
+            </div>
           </div>
         </div>
       </section>
