@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <div>
       <header className="sticky top-0 bg-white shadow-xl py-4 z-10">
-        <div className="container relative mx-auto px-4  md:px-5 flex justify-between items-center ">
+        <div className="container relative px-4  md:px-5 flex justify-between items-center ">
           <div className="bg-purple-500/90 skew-y-3">
             <h1 className="font-lexio text-2xl md:text-3xl uppercase -skew-y-3 font-bold tracking-widest">
               Soldify

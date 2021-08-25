@@ -3,7 +3,7 @@ import React from "react";
 const Error = () => {
   return (
     <div className="bg-gray-200 grid place-content-center h-[90vh]">
-      <div className="container mx-auto bg-white p-2 flex flex-col md:flex-row md:flex-wrap md:justify-center md:items-center w-2/3 md:w-[90%]  text-center">
+      <div className="container bg-white p-2 flex flex-col md:flex-row md:flex-wrap md:justify-center md:items-center w-2/3 md:w-[90%]  text-center">
         <h1 className="text-3xl font-light font-lexio border-b-2 border-gray-500 pb-2 md:border-none md:text-7xl">
           404 Error
         </h1>
