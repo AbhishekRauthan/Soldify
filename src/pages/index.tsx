@@ -11,14 +11,14 @@ const Home = () => {
   return (
     <>
       {/* ------- Hero Section Starts here ------- */}
-      <section className="bg-white">
+      <section className="bg-white pt-20 ">
         <div className="container mt-3 mb-8 md:my-5 lg:my-10 py-5 md:px-8 md:py-10 flex flex-col md:flex-row">
           <img
             src={Shopping}
             alt="Web Shopping SVG"
             className="w-full py-4 px-8 border-purple-500/70 md:h-80 md:w-1/2"
           />
-          <span className="w-64 mt-5 mx-auto h-0.5 md:h-52 md:my-auto md:w-0.5 bg-purple-500 rounded-full" />
+          <span className="w-64 mt-5 mx-auto h-0.5 md:h-48 lg:h-52 md:my-auto md:w-0.5 bg-purple-500 rounded-full" />
           <div className="mt-4 mx-3 md:mx-0 md:w-1/2 text-center grid place-content-center">
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-widest font-lexio uppercase underline">
               Soldify
@@ -48,7 +48,7 @@ const Home = () => {
             <GridItem statement="Get exciting deals" svgSrc={Savings} />
             <GridItem statement="Worldwide shipping" svgSrc={World} />
           </div>
-          <div className="flex justify-center mt-5">
+          <div className="flex justify-center mt-8">
             <Button>Checkout Store</Button>
           </div>
         </div>

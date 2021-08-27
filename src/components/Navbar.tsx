@@ -1,36 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
-const Links = () => {
-  return (
-    <>
-      <div className="nav-div">
-        <Link className="nav-item peer" to="#">
-          hello
-        </Link>
-        <span className="bottom-span" />
-      </div>
-      <div className="nav-div">
-        <Link className="nav-item peer" to="#">
-          hello
-        </Link>
-        <span className="bottom-span" />
-      </div>
-      <div className="nav-div">
-        <Link className="nav-item peer" to="#">
-          hello
-        </Link>
-        <span className="bottom-span" />
-      </div>
-    </>
-  );
-};
+import Links from './Links'
 
 const Navbar = () => {
   const [closed, setClosed] = useState(true);
   return (
-    <div>
-      <header className="sticky top-0 bg-white shadow-xl py-4 z-10">
+    <div className="overflow-visible">
+      <header className="fixed block top-0 bg-white shadow-xl py-4 z-50 w-full">
         <div className="container relative px-4  md:px-5 flex justify-between items-center ">
           <div className="bg-purple-500/90 skew-y-3">
             <h1 className="font-lexio text-2xl md:text-3xl uppercase -skew-y-3 font-bold tracking-widest">

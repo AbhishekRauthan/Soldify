@@ -15,11 +15,11 @@
 }
 
 .nav-div {
-  @apply mx-3 my-3 transform hover:-translate-y-1 duration-300 ease-in-out md:relative;
+  @apply transform hover:-translate-y-1 duration-300 ease-in-out md:relative;
 }
 
 .nav-item {
-  @apply text-xl font-proza items-start uppercase;
+  @apply text-xl font-proza uppercase;
 }
 
 .bottom-span {
