@@ -7,4 +7,14 @@ type ProductList = {
   image: string;
 }
 
+export interface State {
+  allProducts: ProductList[],
+}
+
+export interface reducerType {
+  type: string;
+  payload: ProductList[] | ProductList;
+}
+
+
 export default ProductList;

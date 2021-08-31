@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'
 import Links from './Links'
 
 const Navbar = () => {
@@ -9,7 +10,9 @@ const Navbar = () => {
         <div className="container relative px-4  md:px-5 flex justify-between items-center ">
           <div className="bg-purple-500/90 skew-y-3">
             <h1 className="font-lexio text-2xl md:text-3xl uppercase -skew-y-3 font-bold tracking-widest">
-              Soldify
+             <Link to="/">
+               soldify
+             </Link>
             </h1>
           </div>
           <nav

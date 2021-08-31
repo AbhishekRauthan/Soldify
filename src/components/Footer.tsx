@@ -9,7 +9,7 @@ const Footer = () => {
           soldify
         </h1>
       </div>
-      <div className="container flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-14 items-center md:justify-center align-middle">
+      <div className="container flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-12 items-center md:justify-center align-middle">
         <Links />
       </div>
       <div className="text-center md:text-lg mt-4 text-gray-700 capitalize">

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
+import { Link } from "react-router-dom";
 import Shopping from "../assets/shopping.svg";
 import Button from "../components/Button";
 import GridItem from "../components/GridItem";
@@ -6,13 +7,33 @@ import GridItem from "../components/GridItem";
 import Payments from "../assets/payments.svg";
 import Savings from "../assets/savings.svg";
 import World from "../assets/world.svg";
+import axios from "axios";
+import Categories from "../components/Categories";
 
 const Home = () => {
+  const [data, setData] = useState()
+  async function fetchData() {
+    const response: any = await axios
+      .get("https://fakestoreapi.com/products")
+      .catch((err) => {
+        console.log("Err: ", err);
+      })
+      .then((response: any) => {
+        setData(response.data);
+      });
+    console.table(response.data);
+    
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
-    <>
+    <main className="bg-white">
       {/* ------- Hero Section Starts here ------- */}
-      <section className="bg-white pt-20 ">
-        <div className="container mt-3 mb-8 md:my-5 lg:my-10 py-5 md:px-8 md:py-10 flex flex-col md:flex-row">
+      <section>
+        <div className="container mt-3 mb-8 md:my-5 lg:my-10 pt-20 pb-5 md:px-8 md:py-10 flex flex-col md:flex-row">
           <img
             src={Shopping}
             alt="Web Shopping SVG"
@@ -30,8 +51,12 @@ const Home = () => {
               </span>
             </p>
             <div className="mx-auto mt-3 space-x-4 md:space-x-10 flex items-center">
-              <Button>Checkout Store</Button>
-              <Button secondary>Sign Up</Button>
+              <Button>
+                <Link to="/store">Checkout Store</Link>
+              </Button>
+              <Button secondary>
+                <Link to="/singin">Sign Up</Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -49,12 +74,16 @@ const Home = () => {
             <GridItem statement="Worldwide shipping" svgSrc={World} />
           </div>
           <div className="flex justify-center mt-8">
-            <Button>Checkout Store</Button>
+            <Button>
+              <Link to="/store">Checkout Store</Link>
+            </Button>
           </div>
         </div>
       </section>
       {/* ------- Features Section Ends Here */}
-    </>
+      {/* ------- Categories/Loading Start Here ------- */}
+      {data?<Categories />:"Loading"}
+    </main>
   );
 };
 
