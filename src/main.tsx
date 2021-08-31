@@ -2,14 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
-import Context, { store } from "./context/store";
+import StoreContext, { store } from "./context";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <Context.Provider value={store}>
+      <StoreContext.Provider value={store}>
         <App />
-      </Context.Provider>
+      </StoreContext.Provider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

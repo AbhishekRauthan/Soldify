@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Shopping from "../assets/shopping.svg";
 import Button from "../components/Button";
@@ -11,24 +11,6 @@ import axios from "axios";
 import Categories from "../components/Categories";
 
 const Home = () => {
-  const [data, setData] = useState()
-  async function fetchData() {
-    const response: any = await axios
-      .get("https://fakestoreapi.com/products")
-      .catch((err) => {
-        console.log("Err: ", err);
-      })
-      .then((response: any) => {
-        setData(response.data);
-      });
-    console.table(response.data);
-    
-  }
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
   return (
     <main className="bg-white">
       {/* ------- Hero Section Starts here ------- */}
@@ -82,7 +64,7 @@ const Home = () => {
       </section>
       {/* ------- Features Section Ends Here */}
       {/* ------- Categories/Loading Start Here ------- */}
-      {data?<Categories />:"Loading"}
+      
     </main>
   );
 };
