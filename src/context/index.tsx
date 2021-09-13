@@ -1,16 +1,17 @@
-import React, { FC, useEffect, useState } from "react";
-import axios from "axios";
+import React, { createContext, FC, useEffect, useState } from "react";
+import axios, { AxiosResponse } from "axios";
+import ProductList, { State } from "../types/productList";
+
+const StoreContext = createContext({} as State);
 
 const ContextProvider: FC = ({ children }) => {
-  
-  const [data, setData] = useState();
-  
-  
+  const [data, setData] = useState<ProductList[]>([]);
+
   const getData = async () => {
     await axios
       .get("https://fakestoreapi.com/products")
-      .then((response) => {
-        console.log(response.data);
+      .then((response: AxiosResponse<ProductList[]>) => {
+        setData(response.data);
       })
       .catch((err) => {
         if (err) {
@@ -21,7 +22,11 @@ const ContextProvider: FC = ({ children }) => {
   useEffect(() => {
     getData();
   }, []);
-  return <>{children}</>;
+  return (
+    <StoreContext.Provider value={{ allProducts: data }}>
+      {children}
+    </StoreContext.Provider>
+  );
 };
 
 export default ContextProvider;
