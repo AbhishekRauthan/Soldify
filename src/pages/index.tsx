@@ -7,8 +7,6 @@ import GridItem from "../components/GridItem";
 import Payments from "../assets/payments.svg";
 import Savings from "../assets/savings.svg";
 import World from "../assets/world.svg";
-import axios from "axios";
-import Categories from "../components/Categories";
 
 const Home = () => {
   return (
