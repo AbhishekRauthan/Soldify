@@ -23,5 +23,5 @@
 }
 
 .bottom-span {
-  @apply hidden md:inline-block absolute bottom-0 left-0 peer-hover:bg-gradient-to-r from-pink-400 to-purple-500 delay-150 duration-300 ease-in-out w-0 peer-hover:w-full h-0.5 rounded-full;
+  @apply inline-block absolute bottom-0 left-0 bg-gradient-to-r from-pink-400 to-purple-500 md:delay-150 md:duration-300 md:ease-in-out md:w-0 peer-hover:w-full w-full h-0.5 rounded-full;
 }

@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Shopping from "../assets/shopping.svg";
 import Button from "../components/Button";
+import Grid from "../components/Grid";
 import GridItem from "../components/GridItem";
+import Heading from "../components/Heading";
 // svgs
 import Payments from "../assets/payments.svg";
 import Savings from "../assets/savings.svg";
@@ -45,14 +47,24 @@ const Home = () => {
       {/* ------- Features Section Starts Here */}
       <section className="bg-white">
         <div className="container py-4">
-          <h1 className="font-bold tracking-widest font-lexio underline text-lg md:text-xl lg:text-2xl uppercase text-center mb-5 md:mb-7 lg:mb-10">
-            why use soldify
-          </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-7 px-3 gap-y-7 md:gap-y-10 lg:mx-auto text-center">
-            <GridItem statement="Hassle free Payment" svgSrc={Payments} />
-            <GridItem statement="Get exciting deals" svgSrc={Savings} />
-            <GridItem statement="Worldwide shipping" svgSrc={World} />
-          </div>
+          <Heading>why use soldify</Heading>
+          <Grid>
+            <GridItem
+              statement="Hassle free Payment"
+              imgSrc={Payments}
+              imgAlt="stripe payment"
+            />
+            <GridItem
+              statement="Get exciting deals"
+              imgSrc={Savings}
+              imgAlt="exciting deals"
+            />
+            <GridItem
+              statement="Worldwide shipping"
+              imgSrc={World}
+              imgAlt="Worldwide shipping"
+            />
+          </Grid>
           <div className="flex justify-center mt-8">
             <Button>
               <Link to="/store">Checkout Store</Link>
@@ -62,7 +74,12 @@ const Home = () => {
       </section>
       {/* ------- Features Section Ends Here */}
       {/* ------- Categories/Loading Start Here ------- */}
-      
+      <section className="bg-red-500">
+        <div className="container py-4">
+          <Heading>categories</Heading>
+          <Grid></Grid>
+        </div>
+      </section>
     </main>
   );
 };
