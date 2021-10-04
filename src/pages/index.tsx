@@ -33,10 +33,10 @@ const Home = () => {
               </span>
             </p>
             <div className="mx-auto mt-3 space-x-4 md:space-x-10 flex items-center">
-              <Button>
+              <Button variant="primary">
                 <Link to="/store">Checkout Store</Link>
               </Button>
-              <Button secondary>
+              <Button variant="secondary">
                 <Link to="/singin">Sign Up</Link>
               </Button>
             </div>
@@ -66,7 +66,7 @@ const Home = () => {
             />
           </Grid>
           <div className="flex justify-center mt-8">
-            <Button>
+            <Button variant="primary">
               <Link to="/store">Checkout Store</Link>
             </Button>
           </div>
