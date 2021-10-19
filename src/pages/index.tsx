@@ -9,7 +9,9 @@ import Heading from "../components/Heading";
 import Payments from "../assets/payments.svg";
 import Savings from "../assets/savings.svg";
 import World from "../assets/world.svg";
-
+// images
+import BoatPng from "../assets/boat.png";
+import Image from "../components/Image";
 const Home = () => {
   return (
     <main className="bg-white">
@@ -47,7 +49,9 @@ const Home = () => {
       {/* ------- Features Section Starts Here */}
       <section className="bg-white">
         <div className="container py-4">
-          <Heading>why use soldify</Heading>
+          <Heading additionalStyles="mb-5 md:mb-7 lg:mb-10">
+            why use soldify
+          </Heading>
           <Grid>
             <GridItem
               statement="Hassle free Payment"
@@ -74,10 +78,27 @@ const Home = () => {
       </section>
       {/* ------- Features Section Ends Here */}
       {/* ------- Categories/Loading Start Here ------- */}
-      <section className="bg-red-500">
+      <section className="bg-white">
         <div className="container py-4">
-          <Heading>categories</Heading>
-          <Grid></Grid>
+          <Heading additionalStyles="mb-5 md:mb-7 lg:mb-10">
+            brands present here
+          </Heading>
+          <Grid>
+            <Image Alt="Boat logo" Src={BoatPng} h="32" w="56" />
+            <Image Alt="Boat logo" Src={BoatPng} h="32" w="56" />
+            <Image Alt="Boat logo" Src={BoatPng} h="32" w="56" />
+            <Image Alt="Boat logo" Src={BoatPng} h="32" w="56" />
+            <Image Alt="Boat logo" Src={BoatPng} h="32" w="56" />
+            <Image Alt="Boat logo" Src={BoatPng} h="32" w="56" />
+          </Grid>
+          <Heading additionalStyles="mt-5 md:mt-7 lg:mt-10">
+            and many more
+          </Heading>
+          <div className="flex justify-center mt-8">
+            <Button variant="primary">
+              <Link to="/brands">Checkout All Brands</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </main>
