@@ -16,6 +16,12 @@ const Links = () => {
         </Link>
         <span className="bottom-span" />
       </div>
+      <div className="nav-div">
+        <Link className="nav-item peer" to="/brands">
+          brands
+        </Link>
+        <span className="bottom-span" />
+      </div>
     </>
   );
 };

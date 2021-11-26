@@ -13,7 +13,13 @@ const Footer = () => {
         <Links />
       </div>
       <div className="text-center md:text-lg mt-4 text-gray-700 capitalize">
-        <p>this is a fictional ecommerce site!</p>
+        <p>
+          this is a fictional ecommerce site! Created by{" "}
+          <div className="nav-div inline">
+            <a href="https://github.com/AbhishekRauthan" className="nav-item peer">abhishek</a>
+            <span className="bottom-span" />
+          </div>
+        </p>
       </div>
     </footer>
   );
