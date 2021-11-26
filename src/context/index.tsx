@@ -1,4 +1,10 @@
-import React, { createContext, FC, useEffect, useState } from "react";
+import React, {
+  createContext,
+  FC,
+  useEffect,
+  useState,
+  useContext,
+} from "react";
 import axios, { AxiosResponse } from "axios";
 import ProductList, { State } from "../types/productList";
 
@@ -14,9 +20,7 @@ const ContextProvider: FC = ({ children }) => {
         setData(response.data);
       })
       .catch((err) => {
-        if (err) {
-          console.log("Err:", err);
-        }
+        console.log("Err:", err);
       });
   };
   useEffect(() => {
@@ -28,5 +32,7 @@ const ContextProvider: FC = ({ children }) => {
     </StoreContext.Provider>
   );
 };
+
+export const useStoreContext = () => useContext(StoreContext);
 
 export default ContextProvider;
