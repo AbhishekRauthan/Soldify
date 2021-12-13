@@ -6,15 +6,16 @@ type ProductList = {
   category: string;
   image: string;
   rating: {
-    count: number,
-    rate: number
-  }
-}
+    count: number;
+    rate: number;
+  };
+};
 
 export default ProductList;
 
 export interface State {
-  allProducts: ProductList[],
+  allProducts: ProductList[];
+  categories: string[];
 }
 
 export interface reducerType {
