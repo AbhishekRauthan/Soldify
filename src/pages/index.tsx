@@ -35,12 +35,12 @@ const Home = () => {
               </span>
             </p>
             <div className="mx-auto mt-3 space-x-4 md:space-x-10 flex items-center">
-              <Button variant="primary">
-                <Link to="/store">Checkout Store</Link>
-              </Button>
-              <Button variant="secondary">
-                <Link to="/singin">Sign Up</Link>
-              </Button>
+              <Link to="/store">
+                <Button variant="primary">Checkout Store</Button>
+              </Link>
+              <Link to="/singin">
+                <Button variant="secondary">Sign Up</Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -70,9 +70,9 @@ const Home = () => {
             />
           </Grid>
           <div className="flex justify-center mt-8">
-            <Button variant="primary">
-              <Link to="/store">Checkout Store</Link>
-            </Button>
+            <Link to="/store">
+              <Button variant="primary">Checkout Store</Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -95,9 +95,9 @@ const Home = () => {
             and many more
           </Heading>
           <div className="flex justify-center mt-8">
-            <Button variant="primary">
-              <Link to="/brands">Checkout All Brands</Link>
-            </Button>
+            <Link to="/brands">
+              <Button variant="primary">Checkout All Brands</Button>
+            </Link>
           </div>
         </div>
       </section>

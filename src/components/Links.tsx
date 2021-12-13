@@ -4,24 +4,18 @@ import { Link } from "react-router-dom";
 const Links = () => {
   return (
     <>
-      <div className="nav-div">
-        <Link className="nav-item peer" to="/store">
-          Store
-        </Link>
+      <Link className="nav-div" to="/store">
+        <div className="nav-item peer">Store</div>
         <span className="bottom-span" />
-      </div>
-      <div className="nav-div">
-        <Link className="nav-item peer" to="/categories">
-          categories
-        </Link>
+      </Link>
+      <Link className="nav-div" to="/categories">
+        <div className="nav-item peer">categories</div>
         <span className="bottom-span" />
-      </div>
-      <div className="nav-div">
-        <Link className="nav-item peer" to="/brands">
-          brands
-        </Link>
+      </Link>
+      <Link className="nav-div" to="/brands">
+        <div className="nav-item peer">brands</div>
         <span className="bottom-span" />
-      </div>
+      </Link>
     </>
   );
 };
