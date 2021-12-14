@@ -15,10 +15,12 @@ const Footer = () => {
       <div className="text-center md:text-lg mt-4 text-gray-700 capitalize">
         <p>
           this is a fictional ecommerce site! Created by{" "}
-          <div className="nav-div inline">
-            <a href="https://github.com/AbhishekRauthan" className="nav-item peer">abhishek</a>
-            <span className="bottom-span" />
-          </div>
+          <a
+            href="https://github.com/AbhishekRauthan"
+            className="capitalize text-transparent bg-gradient-to-r from-pink-500 to bg-purple-500 bg-clip-text lg:bg-none lg:text-gray-800 lg:hover:bg-gradient-to-r lg:hover:from-pink-500 lg:hover:bg-purple-500 lg:hover:text-transparent"
+          >
+            abhishek
+          </a>
         </p>
       </div>
     </footer>
