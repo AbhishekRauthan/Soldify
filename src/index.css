@@ -13,15 +13,3 @@
     src: local('LEIXO DEMO'), url('./assets/fonts/LEIXO-DEMO.woff') format('woff');
   }
 }
-
-.nav-div {
-  @apply transform hover:-translate-y-1 duration-300 ease-in-out md:relative;
-}
-
-.nav-item {
-  @apply text-xl font-proza uppercase;
-}
-
-.bottom-span {
-  @apply inline-block absolute bottom-0 left-0 bg-gradient-to-r from-pink-400 to-purple-500 md:delay-150 md:duration-300 md:ease-in-out md:w-0 peer-hover:w-full w-full h-0.5 rounded-full;
-}
