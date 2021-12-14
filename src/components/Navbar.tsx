@@ -7,13 +7,13 @@ const Navbar = () => {
   return (
     <header className="bg-white w-full px-5 xl:px-0 sticky top-0 shadow-md lg:shadow-xl py-4 z-20">
       <nav className="py-1 container relative flex justify-between items-center">
-        <div className="skew-y-3 hover:-skew-y-6 bg-gradient-to-r from-pink-500  to-purple-500 ">
-          <Link to="/">
-            <h1 className="font-lexio text-2xl text-gray-800 uppercase -skew-y-3 p-1.5 tracking-widest hover:skew-y-6">
+        <Link to="/">
+          <div className="p-1 bg-gradient-to-r from-pink-500 to-purple-500 lg:bg-none bg-gray-800 lg:hover:bg-gradient-to-r lg:hover:from-pink-500 lg:hover:to-purple-500">
+            <h1 className="font-lexio text-2xl text-gray-800 uppercase p-1.5 tracking-widest bg-white">
               Soldify
             </h1>
-          </Link>
-        </div>
+          </div>
+        </Link>
         <span className="md:hidden" onClick={() => setClosed(!closed)}>
           <svg
             className={closed ? `h-7 w-7` : "hidden"}
