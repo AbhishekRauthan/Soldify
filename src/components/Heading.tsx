@@ -1,13 +1,12 @@
 import React, { FC, HTMLAttributes } from "react";
 
-interface Props extends HTMLAttributes<HTMLHeadingElement> {
-  additionalStyles?: string;
-}
-
-const Heading: FC<Props> = ({ children, additionalStyles, ...rest }) => {
+const Heading: FC<HTMLAttributes<HTMLHeadingElement>> = ({
+  children,
+  ...rest
+}) => {
   return (
     <h1
-      className={`font-bold tracking-widest font-lexio underline text-lg md:text-xl lg:text-2xl uppercase text-center ${additionalStyles}`}
+      className={`font-bold tracking-widest font-lexio underline text-lg md:text-xl lg:text-2xl uppercase text-center`}
       {...rest}
     >
       {children}
